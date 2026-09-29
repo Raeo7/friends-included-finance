@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: pnpm exec prettier --check .
+        language: system
+        pass_filenames: false
+      - id: eslint
+        name: eslint
+        entry: pnpm exec eslint .
+        language: system
+        pass_filenames: false
+      - id: typecheck
+        name: tsc
+        entry: pnpm exec tsc --noEmit
+        language: system
+        pass_filenames: false
+      - id: vitest
+        name: vitest
+        entry: pnpm exec vitest run
+        language: system
+        pass_filenames: false
