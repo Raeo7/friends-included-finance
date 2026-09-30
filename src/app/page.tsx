@@ -51,7 +51,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <details className="card instructions">
+      <details className="card instructions" open>
         <summary>How to use this system</summary>
         <ol>
           <li>
